@@ -12,8 +12,8 @@ public class frameOne {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             FileReader fr = new FileReader("./src/main/resources/test.json");
-            Scanner entrada = new Scanner(fr);
-            String ler = entrada.next().lines().reduce("",String::concat);
+            Scanner scanner = new Scanner(fr);
+            String ler = scanner.next().lines().reduce("",String::concat);
             ClasseA a = objectMapper.readValue(ler, ClasseA.class);
 
             System.out.println(a.nome);
